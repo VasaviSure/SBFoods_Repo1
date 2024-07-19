@@ -2,11 +2,9 @@ import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
-// const e=require('express')
-// const mongoose=require('mongoose')
-// const UserRouter=require('./routes/userroutes')
-// const cors=require('cors')
-// const app=e()
+import userRouter from "./routes/userRoute.js"
+import 'dotenv/config'
+
 
 //App config
 const app=express()
@@ -22,27 +20,8 @@ connectDB();
 //API End point
 app.use("/api/food",foodRouter)
 app.use("/images",express.static('uploads'))
-// app.use(
-//     cors({
-//         origin:'http://localhost:3000'
-        
-//     })
-// )
-// mongoose.connect('mongodb://localhost:27017/demo_vit')
+app.use('/api/user',userRouter)
 
-// .then(()=>{
-//     console.log('Connection established')
-// })
-// .catch((err)=>{
-//     console.log(`Error is being listened on ${PORT}`,err.message)
-// })
-
-// const userSchema = new mongoose.Schema({
-//     name: String,
-//     age :Number
-// })
-
-// const user=mongoose.model("users",userSchema)
 
 app.get('',(req,res)=>{
     // user.find({}).then((Data1)=>{
