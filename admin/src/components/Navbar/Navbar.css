@@ -7,6 +7,9 @@
 
 .navbar .logo{
     width: max(10%,80px);
+    color: tomato;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .navbar .profile{
