@@ -4,15 +4,15 @@ import { assets } from '../../assets/assets'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
-const LoginPopup=(setshowLogin)=>{
+const LoginPopup=({setShowLogin})=>{
 
   const {url,setToken}=useContext(StoreContext)
 
 const [currState,setcurrState]=useState("Login")
 const [data,setData]=useState({
-  name:" ",
-  email:" ",
-  password:" "
+  name:"",
+  email:"",
+  password:""
 })
 
 const onChangeHandler=(event)=>{
@@ -26,17 +26,17 @@ const onLogin=async(event)=>{
 
    let newUrl=url;
    if(currState==="Login"){
-    newUrl+='api/user/login'
+    newUrl+='/api/user/login'
    }
    else{
-    newUrl+='api/user/register'
+    newUrl+='/api/user/register'
    }
 
    const response=await axios.post(newUrl)
    if(response.data.success){
     setToken(response.data.token)
     localStorage.setItem('token',response.data.token);
-    // setshowLogin(false)
+    setShowLogin(false)
    }
    else{
     alert(response.data.message)
@@ -47,8 +47,8 @@ const onLogin=async(event)=>{
       <form onSubmit={onLogin} className='login-popup-container'>
         <div className="login-popup-title">
             <h2>{currState}</h2>
-            <img onClick={()=>setshowLogin(false)} src={assets.cross_icon} alt="" />
-            {/* <button onClick={()=>setshowLogin(false)}>Close</button> */}
+            <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
+            {/* <button onClick={()=>setShowLogin(false)}>Close</button> */}
         </div>
             <div className="login-popup-inputs">
                 {currState==='Login'?<></>:<input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required />}
