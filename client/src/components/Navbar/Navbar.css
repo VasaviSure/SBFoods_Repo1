@@ -69,14 +69,14 @@ align-items: center;
     position: relative;
 }
 
-.navbar-profile-dropdown{
+.nav-profile-dropdown{
     position: absolute;
     display: none;
     z-index: 1;
     right: 0;
 }
 
-.navbar-profile:hover .navbar-profile-dropdown{
+.navbar-profile:hover .nav-profile-dropdown{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -87,17 +87,17 @@ align-items: center;
     background-color: #fff2ef;
     list-style: none;
 }
-.navbar-profile-dropdown li{
+.nav-profile-dropdown li{
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
 }
 
-.navbar-profile-dropdown img{
+.nav-profile-dropdown img{
     width: 20px;
 }
-.navbar-profile-dropdown li:hover{
+.nav-profile-dropdown li:hover{
     color:tomato;
 }
 @media (max-width:1050px){

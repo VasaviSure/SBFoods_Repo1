@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './LoginPopup.css'
 import { assets } from '../../assets/assets'
 import { useContext } from 'react'
@@ -19,12 +19,9 @@ const onChangeHandler=(event)=>{
   const name=event.target.name
   const value=event.target.value;
   setData(
-    data=>({...data,[name]:value})
-  )
+    data=>({...data,[name]:value}))
 }
-useEffect(()=>{
-  console.log(data)
-})
+
 const onLogin=async(event)=>{
   event.preventDefault()
 
@@ -36,7 +33,7 @@ const onLogin=async(event)=>{
     newUrl+='/api/user/register'
    }
 
-   const response=await axios.post(newUrl)
+   const response=await axios.post(newUrl,data)
    if(response.data.success){
     setToken(response.data.token)
     localStorage.setItem('token',response.data.token);
