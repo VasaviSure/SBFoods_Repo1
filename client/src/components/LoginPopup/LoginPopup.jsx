@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './LoginPopup.css'
 import { assets } from '../../assets/assets'
 import { useContext } from 'react'
@@ -18,9 +18,13 @@ const [data,setData]=useState({
 const onChangeHandler=(event)=>{
   const name=event.target.name
   const value=event.target.value;
-  setData(data=>({...data,[name]:value}))
+  setData(
+    data=>({...data,[name]:value})
+  )
 }
-
+useEffect(()=>{
+  console.log(data)
+})
 const onLogin=async(event)=>{
   event.preventDefault()
 
@@ -48,7 +52,6 @@ const onLogin=async(event)=>{
         <div className="login-popup-title">
             <h2>{currState}</h2>
             <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
-            {/* <button onClick={()=>setShowLogin(false)}>Close</button> */}
         </div>
             <div className="login-popup-inputs">
                 {currState==='Login'?<></>:<input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required />}
