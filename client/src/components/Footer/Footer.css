@@ -54,3 +54,8 @@ gap: 20px;
         text-align: center;
     }
     }
+    .logo-set{
+        color: tomato;
+        font-size: 40px;
+        font-weight: bold;
+    }
