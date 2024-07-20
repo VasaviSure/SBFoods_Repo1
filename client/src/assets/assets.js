@@ -241,16 +241,16 @@ export const food_list = [
         category: "Cake"
     }, {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Cheese Cake",
         image: food_18,
-        price: 12,
+        price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Cake"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Blueberry Cake",
         image: food_19,
-        price: 20,
+        price: 24,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Cake"
     }, {
@@ -278,7 +278,7 @@ export const food_list = [
         _id: "23",
         name: "Mix Veg Pulao",
         image: food_23,
-        price: 10,
+        price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pure Veg"
     }, {
@@ -293,7 +293,7 @@ export const food_list = [
         _id: "25",
         name: "Cheese Pasta",
         image: food_25,
-        price: 12,
+        price: 16,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Pasta"
     },
@@ -341,9 +341,9 @@ export const food_list = [
         category: "Noodles"
     }, {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Soup Noodle Bowl",
         image: food_32,
-        price: 15,
+        price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Noodles"
     }
