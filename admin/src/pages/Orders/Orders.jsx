@@ -43,7 +43,7 @@ const Orders = ({url}) => {
             <div>
               <p className='order-item-food'>
                 {order.items.map((item,index)=>{
-                  if(index===order.item.length-1){
+                  if(index===order.items.length-1){
                     return item.name +" x " + item.quantity
                   }
                   else{
