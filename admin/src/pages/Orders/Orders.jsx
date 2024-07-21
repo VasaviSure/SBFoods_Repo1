@@ -1,11 +1,11 @@
 import React from 'react'
 import './Orders.css'
 import { useState } from 'react'
-import toast from 'react-toastify'
+import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import axios from 'axios'
 
-const Orders = () => {
+const Orders = ({url}) => {
   const [orders,setOrders]=useState([])
 
   const fetchAllOrders=async()=>{
