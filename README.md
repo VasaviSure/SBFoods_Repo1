@@ -1,59 +1,60 @@
-**🍽️ SBFOODS — MERN Food Ordering Website**
+# 🍽️ SBFOODS — MERN Food Ordering Website
 
-SBFOODS is a full-stack MERN (MongoDB, Express, React, Node.js) food-ordering web application.
-Users can browse menu items, add to cart, place orders, and track them.
-Admins can manage menu items and monitor orders in real-time.
+SBFOODS is a full-stack **MERN (MongoDB, Express, React, Node.js)** food ordering web application that allows users to browse dishes, add them to cart, place orders, and track their status in real time.  
+Admins can manage menus and update orders through a dedicated dashboard.
 
-🎥 Demo Video: https://youtu.be/9fswRp9sp6o?si=iauPqNskvLn-Rs2v
+🎥 **Demo Video:** https://youtu.be/9fswRp9sp6o?si=iauPqNskvLn-Rs2v
 
-**🔥 Features**
-1. ✅ Customer Side (User App)
 
-  **Food Browsing:** View all available dishes with image, description, and price.
+---
 
-  **Cart Management:** Add/remove items, adjust quantity, and view live cart total.
+## ✅ Features
 
-  **User Authentication**: Login/Signup modal with persistent session storage.
+### 🛒 Customer Side (User App)
 
-  **Place & Track Orders:** Users can place an order and track its status (Placed → Preparing → Completed).
+| Feature | Description |
+|--------|-------------|
+| 🍱 Food Browsing | View all dishes with image, price, and description |
+| 🛍️ Cart Management | Add/remove items, update quantity, auto-calculate total |
+| 🔐 User Authentication | Login/Signup modal with JWT-based session persistence |
+| 🚚 Order Placement & Tracking | Track order status: _Placed → Preparing → Completed_ |
+| 📱 Fully Responsive UI | Works smoothly on mobile, tablet, and desktop |
 
-  **Mobile Responsive Design:** Fully responsive UI for seamless use on phones, tablets, and desktops.
-  
+---
 
-2. ✅ Admin Dashboard
+### 🛠️ Admin Dashboard
 
-  **Add New Food Items:** Upload images and enter price, name, category, and description.
+| Feature | Description |
+|--------|-------------|
+| ➕ Add New Food Items | Upload images, set price, category, description |
+| ✏️ Edit/Delete Items | Full CRUD (Create, Read, Update, Delete) on menu |
+| 📦 View All Orders | See real-time incoming orders from users |
+| 🔄 Update Order Status | Change order state (_Placed → Preparing → Completed_) |
 
-  **Edit/Delete Menu Items:** Manage menu easily via a CRUD interface.
+---
 
-  **View All Orders in Real-Time:** Track orders placed by customers.
+## 🧰 Tech Stack
 
-  **Update Order Status:** Change progress from Placed → Preparing → Completed.
-  
+| Layer | Technology |
+|------|------------|
+| Frontend | **React.js + Vite, CSS + Bootstrap** |
+| State Management | **Context API + React Hooks** |
+| Backend | **Node.js + Express.js** |
+| Database | **MongoDB (Mongoose ORM)** |
+| Authentication | **JWT** |
+| File Uploads | Supports image upload (e.g., Cloudinary)** |
+| API Style | RESTful APIs |
 
-**🛠️ Tech Stack**
+---
+## 🚀 Setup & Installation
 
-**Frontend:** React.js + Vite, CSS + Bootstrap for styling
-
-**State Management**: React Hooks + Context API
-
-**Backend:** Node.js + Express.js
-
-**Database:** MongoDB for storing users, menu items, orders
-
-**Image Uploads:** Supports uploading food images (e.g., via Cloudinary or other storage)
-
-**Routing & API:** RESTful API endpoints for menu, cart, orders, users
-
-**🚀 Setup & Installation**
-
-**1. Clone Repository**
+ **1️⃣ Clone the Repository**
 
 git clone https://github.com/<your-username>/sbfoods.git
 
 cd sbfoods
 
-**2. Setup Customer Frontend**
+**2️⃣ Start Customer Frontend (User App)**
 
 cd client
 
@@ -61,7 +62,7 @@ npm install
 
 npm run dev
 
-**3. Setup Admin Dashboard**
+**3️⃣ Start Admin Dashboard**
 
 cd ../admin
 
@@ -69,7 +70,8 @@ npm install
 
 npm run dev
 
-**4. Setup Backend Server**
+
+**4️⃣ Start Backend Server**
 
 cd ../server
 
@@ -77,11 +79,15 @@ npm install
 
 npm run dev
 
-**5. Add Environment Variables**
+**5️⃣ Add Environment Variables**
 
-Create .env file inside /server folder:
+Create a .env file inside /server folder:
 
 MONGO_URI=your_mongodb_connection
 
 JWT_SECRET=your_secret_key
 
+---
+📄 License
+
+This project is released under the MIT License.
